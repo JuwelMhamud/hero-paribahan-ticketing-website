@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hero Paribahan</title>
+    <!--daisyUi link  -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+
+  <body class="font-inter container mx-auto">
+    <!-- header start -->
+    <header>
+      <!-- Navbar start from here -->
+      <div class="navbar bg-base-100">
+        <div class="navbar-start">
+          <div class="dropdown">
+            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+            </div>
+            <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                <li><a>Home</a></li>
+                <li><a>About</a></li>
+                <li><a>Destination</a></li>
+                <li><a>Search</a></li>
+            </ul>
+          </div>
+          <a class=" btn-ghost text-2xl font-extrabold">Hero Ticket</a>
+        </div>
+        <div class="navbar-center hidden lg:flex">
+          <ul class="menu menu-horizontal px-1">
+            <li><a>Home</a></li>
+            <li><a>About</a></li>
+            <li><a>Destination</a></li>
+            <li><a>Search</a></li>
+          </ul>
+        </div>
+        <div class="navbar-end">
+          <a class="btn bg-[#1DD10033] text-[#1DD100]">Bus <img src="images/bus-icon.png" alt=""></a>
+        </div>
+      </div>
+      <!-- banner start -->
+      <div
+        class="hero min-h-screen rounded-xl"
+        style="
+          background-image: url(images/banner.png);
+        "
+      >
+        <div class="hero-overlay bg-opacity-60 rounded-xl"></div>
+        <div class="hero-content text-center text-neutral-content">
+          <div class="max-w-lg">
+            <h1 class="mb-5 text-5xl font-bold text-[#FFFFFF]">End To End Travel with <span class="text-[#1DD100]">Hero Paribahan</span></h1>
+            <p class="mb-5">
+                Welcome to "Hero Paribahan," where your journey becomes an adventure! Embrace the epitome of comfort and reliability as we redefine your travel experience. 
+            </p>
+            <a href="" class="btn border-none bg-[#1DD100] hover:bg-[#1DD100] hover:text-white text-2xl ">Buy Tickets</a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Main start -->
+    <main>
+        <!-- coupon section -->
+        <section id="coupon ">
+            <h1 class="text-center font-bold text-4xl mt-12">Best offers for you</h1>
+            <div class="parent flex gap-7">
+                <div class="child-1 bg-[#FFBF0F] flex items-center h-32 justify-center p-5 w-[500px] rounded-lg my-14">
+                    <div class="left ">
+                        <h2 class="font-extrabold text-5xl">15% OFF</h2>
+                        <p class="text-md font-medium">on your next purchase <br>
+                        <span class="font-normal text-gray-400">use by January 2024</span></p>
+                    </div>
+                    <div><img class="h-32 mx-9" src="images/cupon-devider.png" alt="">
+                    </div>
+                    <div class="right">
+                        <h2 class="font-bold text-2xl">NEW15</h2>
+                        <p class="text-md font-normal text-gray-400">Coupon code</p>
+                    </div>
+                </div>
+                <div class="child-2 bg-[#F78C9C] flex items-center h-32 justify-center p-5 w-[500px] rounded-lg my-14">
+                    <div class="left ">
+                        <h2 class="font-extrabold text-5xl">20% OFF</h2>
+                        <p class="text-md font-medium">on your next purchase <br>
+                        <span class="font-normal text-gray-400">use by January 2024</span></p>
+                    </div>
+                    <div><img class="h-32 mx-9" src="images/cupon-devider.png" alt="">
+                    </div>
+                    <div class="right">
+                        <h2 class="font-bold text-2xl">Couple 20</h2>
+                        <p class="text-md font-normal text-gray-600">Coupon Code</p>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center"><button class="border-2 border-solid border-[#1DD100] text-[#1DD100] hover:border-[#1DD100] btn btn-wide">See All Offers</button>
+            </div>
+        </section>
+    </main>
+    <!-- footer start -->
+    <footer></footer>
+  </body>
+</html>
