@@ -178,7 +178,7 @@
                   class="btn text-[#1DD100] bg-[#1DD10033] cursor-default hover:bg-[#1DD10033] border-none"
                 >
                   <img src="images/seat-green.png" alt="" />
-                  <span id="left-seat">40</span>seats left
+                  <span id="left-seat">8</span>seats left
                 </button>
               </div>
             </div>
@@ -253,25 +253,26 @@
                 <p>A</p>
                 <div class="flex gap-4">
                   <div
-                    id="A1"
-                    class="text-md text-[#848688] font-bold bg-[#0307120D] py-2 px-7 rounded-lg cursor-pointer"
+                    id=""
+                    class="text-md text-[#848688] font-bold bg-[#0307120D] py-2 px-7 rounded-lg cursor-pointer seat"
                   >
                     A1
                   </div>
                   <div
-                    class="text-md text-[#848688] font-bold bg-[#0307120D] py-2 px-7 rounded-lg cursor-pointer"
+                    class="text-md text-[#848688] font-bold bg-[#0307120D] py-2 px-7 rounded-lg cursor-pointer seat"
+                    id=""
                   >
                     A2
                   </div>
                 </div>
                 <div class="flex gap-4">
                   <div
-                    class="text-md text-[#848688] font-bold bg-[#0307120D] py-2 px-7 rounded-lg cursor-pointer"
+                    class="text-md text-[#848688] font-bold bg-[#0307120D] py-2 px-7 rounded-lg cursor-pointer seat"
                   >
                     A3
                   </div>
                   <div
-                    class="text-md text-[#848688] font-bold bg-[#0307120D] py-2 px-7 rounded-lg cursor-pointer"
+                    class="text-md text-[#848688] font-bold bg-[#0307120D] py-2 px-7 rounded-lg cursor-pointer seat"
                   >
                     A4
                   </div>
@@ -282,25 +283,28 @@
                 <p>B</p>
                 <div class="flex gap-4">
                   <div
-                    id="A1"
-                    class="text-md text-[#848688] font-bold bg-[#0307120D] py-2 px-7 rounded-lg cursor-pointer"
+                    id=""
+                    class="text-md text-[#848688] font-bold bg-[#0307120D] py-2 px-7 rounded-lg cursor-pointer seat"
                   >
                     B1
                   </div>
                   <div
-                    class="text-md text-[#848688] font-bold bg-[#0307120D] py-2 px-7 rounded-lg cursor-pointer"
+                    class="text-md text-[#848688] font-bold bg-[#0307120D] py-2 px-7 rounded-lg cursor-pointer seat"
+                    id=""
                   >
                     B2
                   </div>
                 </div>
                 <div class="flex gap-4">
                   <div
-                    class="text-md text-[#848688] font-bold bg-[#0307120D] py-2 px-7 rounded-lg cursor-pointer"
+                    class="text-md text-[#848688] font-bold bg-[#0307120D] py-2 px-7 rounded-lg cursor-pointer seat"
+                    id=""
                   >
                     B3
                   </div>
                   <div
-                    class="text-md text-[#848688] font-bold bg-[#0307120D] py-2 px-7 rounded-lg cursor-pointer"
+                    class="text-md text-[#848688] font-bold bg-[#0307120D] py-2 px-7 rounded-lg cursor-pointer seat"
+                    id=""
                   >
                     B4
                   </div>
@@ -319,48 +323,47 @@
                   <!-- head -->
                   <thead>
                     <tr>
-                      <th>Seat</th>
+                      <th>
+                        Seat
+                        <span class="bg-[#1DD100] text-white" id="seat-count"
+                          >0</span
+                        >
+                      </th>
                       <th>Class</th>
                       <th>Price</th>
                     </tr>
                   </thead>
-                  <tbody>
-                    <!-- row 1 -->
-                    <tr>
-                      <td>A1</td>
-                      <td>Economy</td>
-                      <td>550</td>
-                    </tr>
-                    <!-- row 2 -->
-                    <tr class="hover">
-                      <td>A2</td>
-                      <td>Economy</td>
-                      <td>550</td>
-                    </tr>
-                  </tbody>
+                  <tbody id="table-body"></tbody>
                 </table>
               </div>
               <!-- total price -->
               <hr />
-              <div class="flex justify-between">
+              <div class="flex justify-between font-medium">
                 <p>Total Price</p>
-                <p class="pr-12">BDT <span>0</span></p>
+                <p class="pr-10">BDT <span id="total-price">0</span></p>
               </div>
 
-              <label class="input input-bordered flex items-center gap-2 mt-4">
+              <label
+                class="input input-bordered flex items-center gap-2 mt-4"
+                id="input-level"
+              >
                 <input
                   type="text"
                   class="grow"
                   placeholder="Have any coupon?"
+                  id="couponcode"
                 />
-                <button class="btn btn-sm text-white bg-[#1DD100]">
+                <button
+                  class="btn btn-sm text-white bg-[#1DD100]"
+                  onclick=" newGrandPrice('apply')"
+                >
                   Apply
                 </button>
               </label>
 
-              <div class="flex justify-between mt-4">
+              <div class="flex justify-between mt-4 font-medium">
                 <p>Grand Total</p>
-                <p class="pr-12">BDT <span>0</span></p>
+                <p class="pr-10">BDT <span id="grand-total">0</span></p>
               </div>
             </div>
 
@@ -371,6 +374,7 @@
                   type="text"
                   placeholder="Enter your Name"
                   class="input input-bordered w-full max-w-xs"
+                  id="name"
                 />
               </div>
               <div>
@@ -380,6 +384,7 @@
                   inputmode="numeric"
                   placeholder="Enter your Number"
                   class="input input-bordered w-full max-w-xs"
+                  id="number"
                 />
               </div>
               <div>
@@ -391,11 +396,32 @@
                 />
               </div>
 
-              <button
+              <!-- The button to open modal -->
+              <label
+                for="my_modal_7"
                 class="btn btn-wide w-full text-white font-bold bg-[#1DD100]"
+                id="btn"
+                >Next</label
               >
-                Next
-              </button>
+
+              <input type="checkbox" id="my_modal_7" class="modal-toggle" />
+              <div class="modal" role="dialog">
+                <div
+                  class="modal-box flex flex-col justify-center items-center"
+                >
+                  <img src="images/success.png" alt="" />
+                  <h3 class="text-md font-bold text-green-800">Success</h3>
+                  <p class="font-bold">Thank you for Booking Our Bus Seats.</p>
+                  <p class="font-normal">
+                    We are working hard to find the best service and deals for
+                    you.
+                  </p>
+                  <p class="py-4">
+                    Shortly you will find a confirmation in your email.
+                  </p>
+                </div>
+                <label class="modal-backdrop" for="my_modal_7">Close</label>
+              </div>
               <div
                 class="flex gap-10 m-auto text-xs underline decoration-solid"
               >
@@ -409,5 +435,7 @@
     </main>
     <!-- footer start -->
     <footer></footer>
+
+    <script src="script.js"></script>
   </body>
 </html>
